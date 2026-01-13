@@ -40,8 +40,13 @@ To follow along with this guide, you'll need the Fedrigoni dataset.
 
 ### Step 1: Create a Project Folder
 
-Create a folder for your work:
+**Manual way:**
+1. Open Finder (Mac) or File Explorer (Windows)
+2. Go to your Documents folder
+3. Right-click and select "New Folder"
+4. Name it `supply-chain-demo`
 
+**Terminal way:**
 ```bash
 mkdir supply-chain-demo
 cd supply-chain-demo
@@ -49,23 +54,26 @@ cd supply-chain-demo
 
 ### Step 2: Move the Dataset
 
-Move the downloaded CSV file into your project folder:
+**Manual way:**
+1. Find the downloaded file in your Downloads folder
+2. Drag and drop `fedrigoni_converting_orders.csv` into your `supply-chain-demo` folder
 
-**On Mac:**
+**Terminal way (Mac):**
 ```bash
 mv ~/Downloads/fedrigoni_converting_orders.csv .
 ```
 
-**On Windows:**
+**Terminal way (Windows):**
 ```bash
 move %USERPROFILE%\Downloads\fedrigoni_converting_orders.csv .
 ```
 
-Or just drag and drop the file into the folder.
-
 ### Step 3: Start Claude Code
 
+Open your terminal, navigate to your project folder, and start Claude Code:
+
 ```bash
+cd ~/Documents/supply-chain-demo
 claude
 ```
 
