@@ -1,0 +1,4 @@
+{
+  "title": "Demo Walkthrough",
+  "pages": ["step-1-load-data", "step-2-analyze-patterns", "step-3-build-model", "step-4-validate-results", "step-5-recommendations"]
+}

@@ -1,0 +1,106 @@
+---
+title: "Step 1: Load the Data"
+description: Load and explore the Fedrigoni orders dataset
+---
+
+# Step 1: Load the Data
+
+Let's start by loading the dataset and understanding what we're working with.
+
+## Setup
+
+1. Download the dataset from the [Try It Yourself](/docs/try-it-yourself/download-dataset) page
+2. Put it in a folder (e.g., `supply-chain-demo`)
+3. Open your terminal and navigate to that folder
+4. Start Claude Code by typing `claude`
+
+## The Prompt
+
+Copy and paste this prompt:
+
+```
+Load the fedrigoni_converting_orders.csv file and give me:
+1. How many orders are in the dataset
+2. What columns are available
+3. What percentage of orders were delivered late
+4. A summary of any interesting patterns you notice
+```
+
+## What Claude Code Does
+
+Claude Code will:
+
+1. **Read the CSV file** using Python's pandas library
+2. **Analyze the structure** - count rows, identify columns
+3. **Calculate the late delivery rate** - compare actual vs promised dates
+4. **Identify initial patterns** - look for obvious trends
+
+## Expected Output
+
+You should see something like:
+
+```
+I'll load and analyze the Fedrigoni orders dataset.
+
+**Dataset Overview:**
+- Total orders: 5,000
+- Time period: January 2023 - December 2024
+- Columns: 12
+
+**Columns Available:**
+- order_id: Unique identifier
+- product_category: Type of product
+- order_quantity: Number of units
+- facility: Production facility
+- order_date: When order was placed
+- promised_date: When delivery was promised
+- actual_delivery_date: When it actually arrived
+- lead_time_days: Days from order to delivery
+- is_late: Whether delivery was late (1=yes, 0=no)
+- ... and more
+
+**Late Delivery Rate:**
+- On-time: 4,132 orders (82.6%)
+- Late: 868 orders (17.4%)
+
+**Initial Patterns:**
+- Late rate varies significantly by product category
+- Larger orders tend to have higher late rates
+- Certain facilities have more delays than others
+```
+
+## Understanding the Data
+
+### Key Columns
+
+| Column | What It Means |
+|--------|---------------|
+| `order_id` | Unique identifier for each order |
+| `product_category` | What type of product (Wine Labels, Art Papers, etc.) |
+| `order_quantity` | How many units ordered |
+| `facility` | Which factory handles the order |
+| `is_late` | Our target variable (1 = late, 0 = on-time) |
+
+### The Target Variable
+
+`is_late` is what we want to predict. It's calculated by comparing:
+- `promised_date` - when we told the customer
+- `actual_delivery_date` - when it actually arrived
+
+If actual > promised, the order is late.
+
+## Why This Matters
+
+This first step establishes:
+
+1. **Data quality** - Is the data clean? Any missing values?
+2. **Problem scope** - 17.4% late rate is significant
+3. **Available features** - What information can we use for prediction?
+
+## Next Step
+
+Now that we understand the data, let's dig deeper into what causes late deliveries.
+
+<Cards>
+  <Card title="Next: Analyze Patterns" href="/docs/demo-walkthrough/step-2-analyze-patterns" />
+</Cards>

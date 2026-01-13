@@ -1,0 +1,128 @@
+---
+title: Install Claude Code
+description: Step-by-step installation guide for Mac and Windows
+---
+
+# Install Claude Code
+
+Follow these steps to get Claude Code running on your computer.
+
+## Step 1: Open Terminal
+
+### On Mac
+
+1. Press `Cmd + Space` to open Spotlight Search
+2. Type "Terminal"
+3. Press Enter
+
+You'll see a window with a blinking cursor. This is your terminal.
+
+### On Windows
+
+1. Press `Windows + X`
+2. Click "Windows Terminal" or "PowerShell"
+
+You'll see a window with a blinking cursor.
+
+## Step 2: Install Node.js (if needed)
+
+Claude Code needs Node.js to run. Check if you have it:
+
+```bash
+node --version
+```
+
+**If you see a version number** (like `v20.10.0`) - you're good! Skip to Step 3.
+
+**If you see an error** - install Node.js:
+
+### Installing Node.js
+
+1. Go to [nodejs.org](https://nodejs.org)
+2. Download the **LTS** version (the one that says "Recommended")
+3. Run the installer
+4. Follow the prompts (just click "Next" through everything)
+5. Restart your terminal
+
+Now run `node --version` again to confirm it worked.
+
+## Step 3: Install Claude Code
+
+In your terminal, type:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+This downloads and installs Claude Code. It might take a minute.
+
+**If you see permission errors on Mac**, try:
+
+```bash
+sudo npm install -g @anthropic-ai/claude-code
+```
+
+Then enter your computer password when prompted.
+
+## Step 4: Login to Anthropic
+
+Run this command:
+
+```bash
+claude
+```
+
+The first time you run it, Claude Code will:
+1. Open your web browser
+2. Ask you to log in to Anthropic
+3. Authorize Claude Code
+
+Follow the prompts and approve the connection.
+
+## Step 5: Verify It Works
+
+After logging in, you should see Claude Code ready to chat:
+
+```
+╭─────────────────────────────────────────╮
+│ Welcome to Claude Code!                 │
+│                                         │
+│ Type your question or command below.    │
+╰─────────────────────────────────────────╯
+
+You:
+```
+
+**Congratulations!** Claude Code is installed and ready.
+
+## Troubleshooting
+
+### "command not found: node"
+
+Node.js isn't installed. Go back to Step 2.
+
+### "command not found: npm"
+
+Same as above - Node.js isn't installed properly. Reinstall from nodejs.org.
+
+### "permission denied"
+
+On Mac, add `sudo` before the command. On Windows, run Terminal as Administrator.
+
+### "EACCES: permission denied"
+
+On Mac, try fixing npm permissions:
+
+```bash
+sudo chown -R $(whoami) ~/.npm
+```
+
+Then try the install again.
+
+### Still stuck?
+
+Ask Claude Code itself for help! Just describe your error.
+
+<Cards>
+  <Card title="Next: Your First Prompt" href="/docs/getting-started/your-first-prompt" />
+</Cards>

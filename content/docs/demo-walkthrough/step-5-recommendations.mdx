@@ -1,0 +1,123 @@
+---
+title: "Step 5: Recommendations"
+description: Turn AI insights into business action
+---
+
+# Step 5: Recommendations
+
+The final step: translating analysis into business recommendations.
+
+## The Prompt
+
+Copy and paste this prompt:
+
+```
+Based on everything we've learned, create an executive summary with:
+1. The key findings (what causes late deliveries)
+2. Specific recommendations for improvement
+3. Expected impact if recommendations are implemented
+4. Suggested next steps for Fedrigoni
+
+Format this as a brief report suitable for a VP of Operations.
+```
+
+## What Claude Code Does
+
+Claude Code will synthesize all the analysis into business language:
+
+1. **Summarize findings** - Key patterns and insights
+2. **Propose actions** - Specific, actionable recommendations
+3. **Quantify impact** - Expected improvements with numbers
+4. **Outline next steps** - How to move forward
+
+## Expected Output
+
+### Executive Summary
+
+```
+FEDRIGONI LATE DELIVERY ANALYSIS
+Executive Summary for VP Operations
+
+SITUATION
+- 17.4% of converting orders delivered late (868 of 5,000)
+- Estimated annual cost: €573K in penalties
+- Industry benchmark: <5% late delivery rate
+
+KEY FINDINGS
+1. Product Mix Impact
+   - Art & Design Papers: 29.5% late (3x worse than average)
+   - Wine Labels: 8.7% late (best performing)
+
+2. Facility Performance
+   - Sassoferrato: 24.1% late (worst)
+   - Verona Main: 11.2% late (best)
+
+3. Order Size Risk
+   - Orders >1,000 units: 28.7% late
+   - Orders <100 units: 12.1% late
+
+4. Seasonal Patterns
+   - March/September peaks correlate with higher delays
+```
+
+### Recommendations
+
+| # | Recommendation | Expected Impact |
+|---|----------------|-----------------|
+| 1 | **Implement risk scoring** - Flag high-probability orders at intake | Catch 660 high-risk orders for proactive intervention |
+| 2 | **Extend lead times for Art Papers** - Add 3-5 day buffer | Reduce Art Papers late rate from 29.5% to ~15% |
+| 3 | **Investigate Sassoferrato** - Process audit and improvement | Could save €100K+ annually |
+| 4 | **Capacity planning for peak months** - March/September staffing | Smooth seasonal spikes |
+| 5 | **Large order protocol** - Extra monitoring for >1,000 unit orders | Reduce large order late rate by 30% |
+
+### Projected Impact
+
+If recommendations are implemented:
+
+| Metric | Current | Projected | Improvement |
+|--------|---------|-----------|-------------|
+| Overall late rate | 17.4% | 10.5% | -40% |
+| Annual penalty cost | €573K | €344K | -€229K |
+| Critical orders caught | 0% | 89% | +89% |
+
+### Next Steps
+
+1. **Week 1-2:** Deploy risk scoring model in test environment
+2. **Week 3-4:** Pilot proactive intervention on High/Critical orders
+3. **Month 2:** Measure impact, refine thresholds
+4. **Month 3:** Full rollout and process integration
+
+## The Power of This Approach
+
+Notice what we just did in 5 prompts:
+
+1. Loaded and understood the data
+2. Found meaningful patterns
+3. Built a predictive model
+4. Validated it works
+5. Generated business recommendations
+
+**Total time:** About 15-20 minutes
+
+**Traditional approach:** Days or weeks with Excel, SQL, and presentation building
+
+## Key Takeaways
+
+### For the Business
+- Late deliveries are predictable
+- Proactive intervention is possible
+- Significant cost savings available
+
+### For You
+- AI tools can do complex analysis quickly
+- The hard part is asking the right questions
+- Business interpretation is still human work
+
+## Congratulations!
+
+You've completed the demo walkthrough. You now understand how to use Claude Code for supply chain analytics.
+
+<Cards>
+  <Card title="Try It Yourself" href="/docs/try-it-yourself/download-dataset" />
+  <Card title="Key Takeaways" href="/docs/resources/key-takeaways" />
+</Cards>

@@ -1,0 +1,203 @@
+---
+title: Challenge Exercises
+description: Practice problems to test your skills
+---
+
+# Challenge Exercises
+
+Ready to test yourself? Try these exercises without looking at the solutions.
+
+## Exercise 1: Customer Analysis (Easy)
+
+**Scenario:** Your manager wants to know which customer regions have the most problems.
+
+**Your Task:** Write a prompt to analyze late delivery rates by customer region. Identify the top 3 worst-performing regions.
+
+<details>
+<summary>Hint</summary>
+
+Look for a column related to customer location or region in the dataset.
+
+</details>
+
+<details>
+<summary>Sample Solution</summary>
+
+```
+Analyze late delivery rates by customer region:
+1. Show late rate for each region
+2. Rank regions from worst to best
+3. Identify the top 3 regions with highest late rates
+4. Calculate how many orders each region represents
+```
+
+</details>
+
+---
+
+## Exercise 2: Root Cause Deep Dive (Medium)
+
+**Scenario:** Art & Design Papers have a 29.5% late rate. Management wants to know WHY.
+
+**Your Task:** Write a prompt to investigate the root causes of late deliveries specifically for Art & Design Papers.
+
+<details>
+<summary>Hint</summary>
+
+Filter the data to just Art & Design Papers, then analyze what makes some orders late and others on-time within that category.
+
+</details>
+
+<details>
+<summary>Sample Solution</summary>
+
+```
+Focus only on Art & Design Papers orders:
+1. Filter the dataset to just this category
+2. Compare late vs on-time orders - what's different?
+3. Check if certain facilities handle Art Papers worse
+4. Check if order size matters more for this category
+5. Look for any other distinguishing factors
+```
+
+</details>
+
+---
+
+## Exercise 3: Alternative Model (Medium)
+
+**Scenario:** Your data science team wants to compare different modeling approaches.
+
+**Your Task:** Build a model using Random Forest instead of Gradient Boosting. Compare the results.
+
+<details>
+<summary>Hint</summary>
+
+Simply ask for a different algorithm and request a comparison of performance metrics.
+
+</details>
+
+<details>
+<summary>Sample Solution</summary>
+
+```
+Build a Random Forest model for late delivery prediction:
+1. Use the same features as before
+2. Train on the same train/test split
+3. Show AUC, accuracy, precision, and recall
+4. Compare these metrics to the Gradient Boosting model
+5. Which model performs better and why?
+```
+
+</details>
+
+---
+
+## Exercise 4: Business Impact (Hard)
+
+**Scenario:** The CFO wants to know the financial impact of late deliveries.
+
+**Your Task:** Calculate the estimated financial impact of late deliveries assuming:
+- Each late delivery costs €660 in penalties
+- Late deliveries to "Northern Italy" cost €1,200 (premium customers)
+- Orders over 1,000 units that are late cost €2,500
+
+<details>
+<summary>Hint</summary>
+
+You'll need to create different cost categories and sum them up appropriately.
+
+</details>
+
+<details>
+<summary>Sample Solution</summary>
+
+```
+Calculate the financial impact of late deliveries:
+
+Assumptions:
+- Base penalty: €660 per late order
+- Northern Italy late orders: €1,200 per order
+- Large orders (>1000 units) late: €2,500 per order
+
+Calculate:
+1. Total late orders by category
+2. Apply the appropriate penalty to each
+3. Sum total financial impact
+4. Break down impact by product category and facility
+5. Which areas contribute most to penalty costs?
+```
+
+</details>
+
+---
+
+## Exercise 5: Predictive Intervention (Hard)
+
+**Scenario:** Operations wants to know: if we intervene on all "Critical" risk orders, how much could we save?
+
+**Your Task:** Estimate the savings if the team successfully prevents 50% of late deliveries on Critical-risk orders.
+
+<details>
+<summary>Hint</summary>
+
+Use the risk scores from the model, calculate how many Critical orders would be "saved," and apply the cost assumptions.
+
+</details>
+
+<details>
+<summary>Sample Solution</summary>
+
+```
+Estimate savings from proactive intervention:
+
+Scenario:
+- We flag all Critical risk orders (probability > 75%)
+- Intervention successfully prevents 50% of would-be late deliveries
+- Use penalty cost of €660 per late order
+
+Calculate:
+1. How many Critical risk orders are there?
+2. How many are actually late?
+3. If we prevent 50% of those, how many orders are "saved"?
+4. What's the financial savings?
+5. What's the ROI if intervention costs €50 per order?
+```
+
+</details>
+
+---
+
+## Exercise 6: Create Your Own (Expert)
+
+**Scenario:** Think of a question your professor or future employer might ask about this data.
+
+**Your Task:**
+1. Write down the business question
+2. Create a prompt to answer it
+3. Run the prompt and interpret the results
+4. Write a 2-sentence executive summary
+
+This exercise has no solution - it's your chance to think like an analyst!
+
+---
+
+## Grading Yourself
+
+| Exercise | Completed | Notes |
+|----------|-----------|-------|
+| 1. Customer Analysis | ☐ | |
+| 2. Root Cause Deep Dive | ☐ | |
+| 3. Alternative Model | ☐ | |
+| 4. Business Impact | ☐ | |
+| 5. Predictive Intervention | ☐ | |
+| 6. Create Your Own | ☐ | |
+
+**Scoring:**
+- 1-2 complete: Getting started
+- 3-4 complete: Solid understanding
+- 5-6 complete: Ready for real projects
+
+<Cards>
+  <Card title="Key Takeaways" href="/docs/resources/key-takeaways" />
+</Cards>

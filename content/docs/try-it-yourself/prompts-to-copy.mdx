@@ -1,0 +1,139 @@
+---
+title: Prompts to Copy
+description: All demo prompts in one place for easy reference
+---
+
+# All Prompts
+
+Here are all the prompts from the demo in one convenient place. Just copy and paste!
+
+## Prompt 1: Load and Explore Data
+
+```
+Load the fedrigoni_converting_orders.csv file and give me:
+1. How many orders are in the dataset
+2. What columns are available
+3. What percentage of orders were delivered late
+4. A summary of any interesting patterns you notice
+```
+
+**What it does:** Loads the dataset and provides an initial overview.
+
+---
+
+## Prompt 2: Analyze Patterns
+
+```
+Analyze the late delivery patterns in detail:
+1. Break down late rate by product category
+2. Break down late rate by facility
+3. Show if order size affects late delivery rate
+4. Check if there are seasonal patterns (by month)
+5. Create visualizations for the most interesting findings
+```
+
+**What it does:** Discovers which factors correlate with late deliveries.
+
+---
+
+## Prompt 3: Build Predictive Model
+
+```
+Build a predictive model for late deliveries:
+1. Select appropriate features from the dataset
+2. Split into training and testing sets
+3. Train a classification model (try gradient boosting)
+4. Show me the model's accuracy and key performance metrics
+5. Tell me which factors are most important for predictions
+```
+
+**What it does:** Trains a machine learning model to predict late orders.
+
+---
+
+## Prompt 4: Validate and Score
+
+```
+Validate the model and create risk scores:
+1. Score all orders with late delivery probability (0-100%)
+2. Group orders into risk categories: Low, Medium, High, Critical
+3. Show me the actual late rate for each risk category
+4. If the model is good, higher risk groups should have higher actual late rates
+5. Export a list of high-risk orders with their details
+```
+
+**What it does:** Validates predictions and creates actionable risk scores.
+
+---
+
+## Prompt 5: Generate Recommendations
+
+```
+Based on everything we've learned, create an executive summary with:
+1. The key findings (what causes late deliveries)
+2. Specific recommendations for improvement
+3. Expected impact if recommendations are implemented
+4. Suggested next steps for Fedrigoni
+
+Format this as a brief report suitable for a VP of Operations.
+```
+
+**What it does:** Synthesizes analysis into business recommendations.
+
+---
+
+## Bonus Prompts
+
+### Quick Statistics
+
+```
+Give me a quick statistical summary of the dataset -
+means, medians, and standard deviations for numeric columns.
+```
+
+### Correlation Analysis
+
+```
+Show me the correlation between all numeric variables
+and the late delivery indicator. Which variables have
+the strongest relationship with late deliveries?
+```
+
+### Export Results
+
+```
+Export the following to separate CSV files:
+1. All high-risk orders (probability > 50%)
+2. Summary statistics by product category
+3. Monthly late delivery trends
+```
+
+### What-If Analysis
+
+```
+If we could reduce the late rate for Art & Design Papers
+from 29.5% to 15%, what would be the impact on the
+overall company late delivery rate?
+```
+
+### Compare Facilities
+
+```
+Create a detailed comparison of all facilities including:
+- Order volume
+- Late delivery rate
+- Average order size
+- Product mix
+Rank them from best to worst performing.
+```
+
+## Tips for Using These Prompts
+
+1. **Run them in order** - Each prompt builds on the previous one
+2. **Wait for completion** - Let Claude finish before sending the next prompt
+3. **Ask follow-ups** - If something isn't clear, ask for clarification
+4. **Modify as needed** - These are starting points, customize for your questions
+
+<Cards>
+  <Card title="Challenge Exercises" href="/docs/try-it-yourself/challenge-exercises" />
+</Cards>

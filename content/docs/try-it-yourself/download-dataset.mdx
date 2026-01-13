@@ -1,0 +1,99 @@
+---
+title: Download Dataset
+description: Get the data file to practice with Claude Code
+---
+
+# Download the Dataset
+
+To follow along with this guide, you'll need the Fedrigoni dataset.
+
+## Download Link
+
+<a href="/fedrigoni_converting_orders.csv" download className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+  Download Dataset (CSV)
+</a>
+
+**File Details:**
+- **Name:** `fedrigoni_converting_orders.csv`
+- **Size:** ~750 KB
+- **Records:** 5,000 orders
+- **Format:** CSV (comma-separated values)
+
+## What's in the Data
+
+| Column | Description | Example |
+|--------|-------------|---------|
+| `order_id` | Unique order identifier | ORD-0001 |
+| `product_category` | Type of product | Wine Labels |
+| `product_subcategory` | Specific product line | Premium Coated |
+| `order_quantity` | Number of units | 500 |
+| `facility` | Production facility | Verona Main |
+| `region` | Customer region | Northern Italy |
+| `order_date` | Date order was placed | 2023-03-15 |
+| `promised_date` | Promised delivery date | 2023-03-25 |
+| `actual_delivery_date` | Actual delivery date | 2023-03-27 |
+| `lead_time_days` | Days from order to delivery | 12 |
+| `is_late` | Late delivery indicator | 1 (late) or 0 (on-time) |
+| `days_late` | How many days late (if late) | 2 |
+
+## Setup Instructions
+
+### Step 1: Create a Project Folder
+
+Create a folder for your work:
+
+```bash
+mkdir supply-chain-demo
+cd supply-chain-demo
+```
+
+### Step 2: Move the Dataset
+
+Move the downloaded CSV file into your project folder:
+
+**On Mac:**
+```bash
+mv ~/Downloads/fedrigoni_converting_orders.csv .
+```
+
+**On Windows:**
+```bash
+move %USERPROFILE%\Downloads\fedrigoni_converting_orders.csv .
+```
+
+Or just drag and drop the file into the folder.
+
+### Step 3: Start Claude Code
+
+```bash
+claude
+```
+
+### Step 4: Verify the File
+
+Ask Claude to confirm it can see the file:
+
+```
+List the files in this folder
+```
+
+You should see `fedrigoni_converting_orders.csv` in the output.
+
+## Data Quality Notes
+
+This is a **simulated dataset** based on realistic supply chain patterns:
+
+- Product categories and late rates match real industry patterns
+- Facility performance differences are realistic
+- Seasonal patterns reflect actual business cycles
+
+The data has been cleaned and contains no missing values.
+
+## Ready to Practice
+
+Once you have the dataset downloaded and in your project folder, you're ready to follow the demo walkthrough or try the challenge exercises.
+
+<Cards>
+  <Card title="All Prompts" href="/docs/try-it-yourself/prompts-to-copy" />
+  <Card title="Challenge Exercises" href="/docs/try-it-yourself/challenge-exercises" />
+</Cards>

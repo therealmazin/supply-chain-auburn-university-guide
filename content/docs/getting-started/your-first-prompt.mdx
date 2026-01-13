@@ -1,0 +1,122 @@
+---
+title: Your First Prompt
+description: Try your first conversation with Claude Code
+---
+
+# Your First Prompt
+
+Let's make sure everything works by running a simple test.
+
+## Starting Claude Code
+
+1. Open your terminal
+2. Navigate to a folder where you want to work (or stay in your home folder)
+3. Type `claude` and press Enter
+
+You should see:
+
+```
+You:
+```
+
+This is where you type your questions.
+
+## Try These Prompts
+
+### Prompt 1: Hello World
+
+Type this and press Enter:
+
+```
+What is supply chain management in one sentence?
+```
+
+Claude will respond with a definition. This confirms it's working!
+
+### Prompt 2: Create a Simple File
+
+Try this:
+
+```
+Create a text file called notes.txt with three key goals of supply chain management
+```
+
+Claude Code will:
+1. Create the file
+2. Show you what it wrote
+3. Save it to your folder
+
+Check your folder - you should see `notes.txt`!
+
+### Prompt 3: Basic Math
+
+```
+If I have 1000 orders and 174 are late, what's my on-time delivery rate?
+```
+
+Claude will calculate: `(1000 - 174) / 1000 = 82.6%`
+
+## How Conversations Work
+
+Claude Code remembers your conversation. You can build on previous questions:
+
+```
+You: What is demand forecasting?
+
+Claude: Demand forecasting is predicting future customer demand...
+
+You: What methods are commonly used?
+
+Claude: Common methods include moving averages, exponential smoothing...
+
+You: Can you give me a simple example with numbers?
+
+Claude: Sure! Let's say your sales data is...
+```
+
+## Tips for Better Prompts
+
+### Be Specific
+
+| Vague | Better |
+|-------|--------|
+| "Analyze this data" | "Load orders.csv and tell me the late delivery rate" |
+| "Make a chart" | "Create a bar chart showing orders by product category" |
+| "Help with forecasting" | "Predict next month's demand using the last 12 months of data" |
+
+### Include Context
+
+Tell Claude what you're trying to accomplish:
+
+```
+I'm preparing a report for my manager about supplier performance.
+Load the supplier_data.csv file and show me which suppliers
+have the highest defect rates.
+```
+
+### Ask for Explanations
+
+Claude can explain its work:
+
+```
+Calculate the safety stock for this product and explain
+each step so I can present it to my team.
+```
+
+## Exiting Claude Code
+
+When you're done, type:
+
+```
+/exit
+```
+
+Or press `Ctrl + C` twice.
+
+## Ready for the Real Thing?
+
+Now that you've got Claude Code working, let's learn about the business problem we'll be solving.
+
+<Cards>
+  <Card title="Next: The Fedrigoni Use Case" href="/docs/use-case/fedrigoni-background" />
+</Cards>

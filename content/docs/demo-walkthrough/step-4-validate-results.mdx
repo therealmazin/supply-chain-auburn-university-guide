@@ -1,0 +1,109 @@
+---
+title: "Step 4: Validate Results"
+description: Check that the model predictions make business sense
+---
+
+# Step 4: Validate Results
+
+Before trusting the model, we need to verify it makes sense.
+
+## The Prompt
+
+Copy and paste this prompt:
+
+```
+Validate the model and create risk scores:
+1. Score all orders with late delivery probability (0-100%)
+2. Group orders into risk categories: Low, Medium, High, Critical
+3. Show me the actual late rate for each risk category
+4. If the model is good, higher risk groups should have higher actual late rates
+5. Export a list of high-risk orders with their details
+```
+
+## Why Validation Matters
+
+A model can have good metrics but still be useless. We need to check:
+
+1. **Does it make sense?** - Are predictions logical?
+2. **Is it calibrated?** - Does 80% probability mean ~80% actual late rate?
+3. **Is it actionable?** - Can we use these scores to make decisions?
+
+## Expected Results
+
+### Risk Categories
+
+Claude will create risk buckets:
+
+| Risk Level | Probability Range | Orders |
+|------------|-------------------|--------|
+| Low | 0-25% | 2,847 |
+| Medium | 25-50% | 1,243 |
+| High | 50-75% | 660 |
+| Critical | 75-100% | 250 |
+
+### The Key Validation
+
+Here's the critical check - actual late rates by risk category:
+
+| Risk Level | Predicted Range | **Actual Late Rate** |
+|------------|-----------------|----------------------|
+| Low | 0-25% | 6.2% |
+| Medium | 25-50% | 28.4% |
+| High | 50-75% | 58.3% |
+| Critical | 75-100% | 89.7% |
+
+**This is great news!** The model works:
+
+- Orders flagged as "Critical" are late **89.7%** of the time
+- Orders flagged as "Low" are late only **6.2%** of the time
+- The pattern is monotonic (increases consistently)
+
+### High-Risk Order List
+
+Claude will export something like:
+
+| Order ID | Product | Quantity | Facility | Risk Score |
+|----------|---------|----------|----------|------------|
+| ORD-3847 | Art Papers | 2,500 | Sassoferrato | 94.2% |
+| ORD-4012 | Security | 1,800 | Fabriano | 91.8% |
+| ORD-3956 | Art Papers | 3,200 | Fabriano | 89.4% |
+| ... | ... | ... | ... | ... |
+
+This is actionable intelligence!
+
+## What Makes This Validation Strong
+
+### 1. Separation
+The difference between Low (6.2%) and Critical (89.7%) is huge. The model clearly distinguishes risky orders.
+
+### 2. Monotonicity
+Each risk level has a higher actual late rate than the previous one. No inversions.
+
+### 3. Business Logic
+The high-risk orders make sense:
+- Large quantities (harder to produce)
+- Art & Design products (known to be difficult)
+- Sassoferrato/Fabriano facilities (underperformers)
+
+## Red Flags to Watch For
+
+If you see these, the model might have problems:
+
+- **Non-monotonic:** Medium risk has higher late rate than High
+- **Poor separation:** All categories are within 5% of each other
+- **Nonsensical:** Model says small orders are riskier than large
+
+## Trust but Verify
+
+Even with good validation:
+- Don't blindly trust every prediction
+- Use risk scores as guidance, not gospel
+- Monitor model performance over time
+
+## Next Step
+
+The model is validated. Now let's turn these insights into business recommendations.
+
+<Cards>
+  <Card title="Next: Recommendations" href="/docs/demo-walkthrough/step-5-recommendations" />
+</Cards>

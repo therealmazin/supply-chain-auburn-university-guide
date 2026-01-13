@@ -1,0 +1,106 @@
+---
+title: "Step 2: Analyze Patterns"
+description: Discover what factors correlate with late deliveries
+---
+
+# Step 2: Analyze Patterns
+
+Now let's find out what makes some orders late and others on-time.
+
+## The Prompt
+
+Copy and paste this prompt:
+
+```
+Analyze the late delivery patterns in detail:
+1. Break down late rate by product category
+2. Break down late rate by facility
+3. Show if order size affects late delivery rate
+4. Check if there are seasonal patterns (by month)
+5. Create visualizations for the most interesting findings
+```
+
+## What Claude Code Does
+
+Claude Code will:
+
+1. **Group the data** by different dimensions
+2. **Calculate late rates** for each group
+3. **Identify significant differences** between groups
+4. **Create charts** to visualize the patterns
+
+## Expected Results
+
+### By Product Category
+
+| Category | Orders | Late Rate |
+|----------|--------|-----------|
+| Wine Labels | 1,250 | 8.7% |
+| Luxury Packaging | 980 | 12.3% |
+| Self-Adhesive | 1,100 | 18.2% |
+| Art & Design Papers | 890 | 29.5% |
+| Security Papers | 780 | 21.4% |
+
+**Insight:** Art & Design Papers have 3x higher late rate than Wine Labels.
+
+### By Facility
+
+| Facility | Orders | Late Rate |
+|----------|--------|-----------|
+| Verona Main | 1,800 | 11.2% |
+| Arco Specialty | 1,200 | 15.8% |
+| Fabriano Mill | 1,100 | 22.4% |
+| Sassoferrato | 900 | 24.1% |
+
+**Insight:** Northern facilities (Verona, Arco) outperform southern ones.
+
+### By Order Size
+
+| Order Size | Late Rate |
+|------------|-----------|
+| Small (< 100 units) | 12.1% |
+| Medium (100-500) | 16.8% |
+| Large (500-1000) | 21.3% |
+| Very Large (> 1000) | 28.7% |
+
+**Insight:** Bigger orders are significantly more likely to be late.
+
+### By Month
+
+Claude will likely show you a chart revealing:
+- **Peak delay months:** March, September (seasonal rushes)
+- **Best months:** January, July (lower volume periods)
+
+## Visualizations
+
+Claude Code will create charts like:
+
+- **Bar chart** showing late rate by category
+- **Heatmap** showing facility x month patterns
+- **Scatter plot** showing order size vs. late rate
+
+These visuals make patterns immediately obvious.
+
+## Key Insights from This Step
+
+1. **Product type matters** - Some products are inherently harder to deliver on time
+2. **Facility matters** - Not all factories perform equally
+3. **Order size matters** - Large orders are riskier
+4. **Timing matters** - Seasonal patterns exist
+
+## Business Translation
+
+What does this mean for Fedrigoni?
+
+- **Art & Design Papers** need extra attention or longer lead times
+- **Sassoferrato facility** may need process improvements
+- **Large orders** should be flagged for proactive monitoring
+- **March and September** require additional capacity planning
+
+## Next Step
+
+We've found patterns. Now let's build a model that can predict late deliveries.
+
+<Cards>
+  <Card title="Next: Build Model" href="/docs/demo-walkthrough/step-3-build-model" />
+</Cards>

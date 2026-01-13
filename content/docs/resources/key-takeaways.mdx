@@ -1,0 +1,146 @@
+---
+title: Key Takeaways
+description: What you should remember from this guide
+---
+
+# Key Takeaways
+
+Here's what you should remember from this guide.
+
+## About AI in Supply Chain
+
+### 1. AI is a Tool, Not Magic
+
+AI doesn't replace thinking. It:
+- **Accelerates** analysis (hours → minutes)
+- **Finds** patterns humans might miss
+- **Scales** to large datasets
+
+But you still need to:
+- Ask the right questions
+- Interpret results critically
+- Make business decisions
+
+### 2. Prediction Enables Prevention
+
+The biggest value of predictive models isn't being right. It's **enabling action**:
+
+| Reactive Approach | Predictive Approach |
+|-------------------|---------------------|
+| "This order shipped late" | "This order might ship late" |
+| Apologize to customer | Intervene before it's late |
+| No time to fix | Time to allocate resources |
+
+### 3. Good Enough Beats Perfect
+
+Our model had 72.6% AUC - not perfect. But:
+- Caught 89.7% of Critical risk orders that were actually late
+- Still saved €229K in projected penalties
+- Perfect is the enemy of good
+
+## About Claude Code
+
+### 4. Plain English Works
+
+You don't need to know Python or SQL. These prompts work:
+
+```
+Show me which products have the highest defect rates
+```
+
+```
+Build a model to predict customer churn
+```
+
+```
+Create a chart showing sales trends by region
+```
+
+### 5. Iterate and Refine
+
+Your first prompt rarely gives perfect results. That's okay!
+
+```
+You: Analyze the data
+Claude: [Shows general summary]
+You: Focus on late deliveries specifically
+Claude: [Shows late delivery analysis]
+You: Break that down by product category
+Claude: [Shows exactly what you need]
+```
+
+### 6. Ask for Explanations
+
+Claude can teach while it works:
+
+```
+Build a predictive model and explain each step
+so I can present this to my team
+```
+
+## About Your Career
+
+### 7. AI Literacy is a Differentiator
+
+Most business professionals:
+- Know AI exists
+- Don't know how to use it
+
+You now know how to:
+- Frame business problems for AI
+- Use AI tools for analysis
+- Interpret and validate results
+- Translate insights into recommendations
+
+That's valuable.
+
+### 8. The Human Role Evolves
+
+AI handles:
+- Data processing
+- Pattern recognition
+- Model building
+
+Humans handle:
+- Problem framing
+- Business judgment
+- Stakeholder communication
+- Ethical decisions
+
+Your job isn't threatened by AI. It's enhanced by it.
+
+## Technical Takeaways
+
+### 9. Validation is Essential
+
+Never trust a model without validation:
+
+| Check | What It Tells You |
+|-------|-------------------|
+| Monotonic risk buckets | Model ranks correctly |
+| Business logic alignment | Results make sense |
+| Holdout test performance | Model generalizes |
+
+### 10. Features Matter More Than Algorithms
+
+What you put into the model matters more than which algorithm you use:
+
+- **Product category** predicted 32% of late deliveries
+- **Order quantity** predicted 24%
+- **Facility** predicted 19%
+
+Understanding your data > fancy algorithms.
+
+## Summary
+
+| Topic | Key Point |
+|-------|-----------|
+| AI | Tool that accelerates analysis, not magic |
+| Prediction | Enables prevention, not just accuracy |
+| Claude Code | Plain English works, iterate and refine |
+| Career | AI literacy differentiates you |
+| Technical | Validation > blind trust |
+
+<Cards>
+  <Card title="Further Reading" href="/docs/resources/further-reading" />
+</Cards>
