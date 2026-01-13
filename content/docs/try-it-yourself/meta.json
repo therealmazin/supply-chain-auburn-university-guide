@@ -1,4 +1,5 @@
 {
   "title": "Try It Yourself",
+  "icon": "FlaskConical",
   "pages": ["download-dataset", "prompts-to-copy", "challenge-exercises"]
 }

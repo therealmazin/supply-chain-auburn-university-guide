@@ -1,4 +1,5 @@
 {
   "title": "Resources",
+  "icon": "Library",
   "pages": ["key-takeaways", "further-reading", "contact"]
 }

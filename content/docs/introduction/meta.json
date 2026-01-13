@@ -1,4 +1,5 @@
 {
   "title": "Introduction",
+  "icon": "BookOpen",
   "pages": ["what-is-claude-code", "why-ai-for-supply-chain"]
 }

@@ -1,3 +1,23 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+/* Make ALL sidebar text bold and dark */
+aside[class*="sidebar"] * {
+  --tw-text-opacity: 1 !important;
+}
+
+/* Target sidebar folder/section titles */
+aside button span,
+aside a span,
+[data-radix-scroll-area-viewport] button span {
+  font-weight: 600 !important;
+  color: rgb(0 0 0 / 0.9) !important;
+}
+
+/* Dark mode support */
+.dark aside button span,
+.dark aside a span,
+.dark [data-radix-scroll-area-viewport] button span {
+  color: rgb(255 255 255 / 0.9) !important;
+}
