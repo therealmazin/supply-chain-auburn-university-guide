@@ -35,11 +35,10 @@ Claude Code will:
 
 | Category | Orders | Late Rate |
 |----------|--------|-----------|
-| Wine Labels | 1,250 | 8.7% |
-| Luxury Packaging | 980 | 12.3% |
-| Self-Adhesive | 1,100 | 18.2% |
-| Art & Design Papers | 890 | 29.5% |
-| Security Papers | 780 | 21.4% |
+| Art_Design_Papers | 501 | **29.5%** |
+| Luxury_Packaging | 1,263 | 23.4% |
+| Self_Adhesive_Materials | 1,537 | 18.0% |
+| Wine_Labels | 1,699 | 8.7% |
 
 **Insight:** Art & Design Papers have 3x higher late rate than Wine Labels.
 
@@ -47,29 +46,33 @@ Claude Code will:
 
 | Facility | Orders | Late Rate |
 |----------|--------|-----------|
-| Verona Main | 1,800 | 11.2% |
-| Arco Specialty | 1,200 | 15.8% |
-| Fabriano Mill | 1,100 | 22.4% |
-| Sassoferrato | 900 | 24.1% |
+| Sao_Paulo_BR | 1,041 | **21.9%** |
+| Chicago_US | 1,035 | 19.2% |
+| Barcelona_ES | 991 | 17.4% |
+| Fabriano_IT | 977 | 15.1% |
+| Verona_IT | 956 | 12.7% |
 
-**Insight:** Northern facilities (Verona, Arco) outperform southern ones.
+**Insight:** Sao Paulo facility has the highest late rate. Verona performs best.
 
-### By Order Size
+### By Order Priority
 
-| Order Size | Late Rate |
-|------------|-----------|
-| Small (< 100 units) | 12.1% |
-| Medium (100-500) | 16.8% |
-| Large (500-1000) | 21.3% |
-| Very Large (> 1000) | 28.7% |
+| Priority | Orders | Late Rate |
+|----------|--------|-----------|
+| Economy | 470 | **28.1%** |
+| Standard | 2,762 | 19.7% |
+| Express | 1,264 | 12.5% |
+| Critical | 504 | 6.9% |
 
-**Insight:** Bigger orders are significantly more likely to be late.
+**Insight:** Economy orders get deprioritized. Critical orders rarely miss deadlines.
 
-### By Month
+### By Month (Seasonal Patterns)
 
-Claude will likely show you a chart revealing:
-- **Peak delay months:** March, September (seasonal rushes)
-- **Best months:** January, July (lower volume periods)
+| Worst Months | Late Rate | Best Months | Late Rate |
+|--------------|-----------|-------------|-----------|
+| August | 25.9% | April | 11.2% |
+| September | 25.2% | November | 14.8% |
+
+**Insight:** Late summer (Aug/Sep) is the worst period for on-time delivery.
 
 ## Visualizations
 
@@ -93,9 +96,9 @@ These visuals make patterns immediately obvious.
 What does this mean for Fedrigoni?
 
 - **Art & Design Papers** need extra attention or longer lead times
-- **Sassoferrato facility** may need process improvements
-- **Large orders** should be flagged for proactive monitoring
-- **March and September** require additional capacity planning
+- **Sao Paulo facility** may need process improvements
+- **Economy orders** are being deprioritized - is this intentional?
+- **August and September** require additional capacity planning
 
 ## Next Step
 
